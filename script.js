@@ -21,16 +21,21 @@ console.log(priceKm);
 
 
 // 4. Mi calcolo il prezzo pieno del biglietto
-const price = (km * priceKm);
+const price = (km * priceKm).toFixed(2);
 console.log(price);
 
 let FinalPrice = price
 
 if (age < 18) {
-    FinalPrice = (price / 100 *80)
+    FinalPrice = (price / 100 *80).toFixed(2)
 }  
 else if (age >= 65) {
-    FinalPrice = ((price / 100)*60)
+    FinalPrice = ((price / 100)*60).toFixed(2)
 }
 
 console.log(FinalPrice);
+
+document.getElementById('km').innerText = 'Hai scelto di percorrere: ' + km + 'km';
+document.getElementById('price').innerText = 'Il prezzo del tuo biglietto è: ' + price + '€';
+document.getElementById('FinalPrice').innerText = 'Il prezzo scontato del tuo biglietto è: ' + FinalPrice + '€';
+
