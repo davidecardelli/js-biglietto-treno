@@ -14,17 +14,23 @@ console.log(km);
 const age = prompt('Quanti anni hai?', '20')
 console.log(age);
 
+
 // 3. Mi fisso una variabile con il prezzo del biglietto al km
 const priceKm = 0.21
 console.log(priceKm);
+
 
 // 4. Mi calcolo il prezzo pieno del biglietto
 const price = (km * priceKm);
 console.log(price);
 
-// //     4.1 se l'utente ha un'eta < 18 applico sconto del 20%
-// se l'utente ha age < 18
-// (price / 100) * 80
-// //     4.2 se l'utente ha un'età > 65 applico sconto del 40%
-// se l'utente ha age > 65
-// (price / 100) * 60
+let FinalPrice = price
+
+if (age < 18) {
+    FinalPrice = (price / 100 *80)
+}  
+else if (age >= 65) {
+    FinalPrice = ((price / 100)*60)
+}
+
+console.log(FinalPrice);
