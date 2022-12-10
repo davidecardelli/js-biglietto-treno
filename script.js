@@ -21,7 +21,7 @@ console.log(priceKm);
 
 
 // 4. Mi calcolo il prezzo pieno del biglietto
-const price = (km * priceKm).toFixed(2);
+const price = (km * priceKm);
 console.log(price);
 
 let FinalPrice = price
